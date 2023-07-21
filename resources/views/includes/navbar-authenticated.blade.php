@@ -20,10 +20,7 @@
               <a href="/index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="/categories.html" class="nav-link">Categories</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Rewards</a>
+              <a href="/categories.html" class="nav-link">Kategori</a>
             </li>
           </ul>
 

@@ -8,13 +8,12 @@
             <div class="row align-items-center justify-content-center row-login">
                 <div class="col-lg-4">
                     <h2>
-                        Memulai untuk jual beli <br />
-                        dengan cara terbaru
+                        Beli Produk UMKM asli dari Desa Tegalgede
                     </h2>
                     <form class="mt-3" method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="form-group">
-                            <label>Full Name</label>
+                            <label>Nama Lengkap</label>
                             <input 
                                 v-model="name"
                                 id="name" 
@@ -33,7 +32,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Email Address</label>
+                            <label>Alamat Email</label>
                             <input 
                                 v-model="email"
                                 @change="checkForEmailAvailability()"
@@ -148,10 +147,10 @@
                             class="btn btn-success btn-block mt-4"
                             :disabled="this.email_unavailable"
                         >
-                            Sign Up Now
+                            Daftar Sekarang
                         </button>
                         <a href="{{ route('login') }}" class="btn btn-signup btn-block mt-2">
-                            Back to Sign In
+                            Kembali Login
                         </a>
                     </form>
                 </div>
@@ -209,8 +208,6 @@
         },
         data() {
             return {
-                name: "Angga Hazza Sett",
-                email: "kamujagoan@bwa.id",
                 is_store_open: true,
                 store_name: "",
                 email_unavailable: false
