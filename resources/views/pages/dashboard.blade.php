@@ -35,10 +35,10 @@ data-aos="fade-up"
         <div class="card mb-2">
             <div class="card-body">
             <div class="dashboard-card-title">
-                Revenue
+                Jumlah Produk
             </div>
             <div class="dashboard-card-subtitle">
-                ${{ number_format($revenue) }}
+                {{ number_format($revenue) }}
             </div>
             </div>
         </div>
@@ -47,7 +47,7 @@ data-aos="fade-up"
         <div class="card mb-2">
             <div class="card-body">
             <div class="dashboard-card-title">
-                Transaction
+                Jumlah Toko
             </div>
             <div class="dashboard-card-subtitle">
                 {{ number_format($transaction_count) }}

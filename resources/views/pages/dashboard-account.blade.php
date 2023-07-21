@@ -12,7 +12,7 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-      <h2 class="dashboard-title">My Account</h2>
+      <h2 class="dashboard-title">Akunku</h2>
       <p class="dashboard-subtitle">
         Update your current profile
       </p>
@@ -27,7 +27,7 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="name">Your Name</label>
+                      <label for="name">Nama Anda</label>
                       <input
                         type="text"
                         class="form-control"
@@ -39,7 +39,7 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="email">Your Email</label>
+                      <label for="email">Email Anda</label>
                       <input
                         type="email"
                         class="form-control"
@@ -75,7 +75,7 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="provinces_id">Province</label>
+                      <label for="provinces_id">Provinsi</label>
                       <select name="provinces_id" id="provinces_id" class="form-control" v-model="provinces_id" v-if="provinces">
                         <option v-for="province in provinces" :value="province.id">@{{ province.name }}</option>
                       </select>
@@ -84,7 +84,7 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="regencies_id">City</label>
+                      <label for="regencies_id">Kota</label>
                       <select name="regencies_id" id="regencies_id" class="form-control" v-model="regencies_id" v-if="regencies">
                         <option v-for="regency in regencies" :value="regency.id">@{{regency.name }}</option>
                       </select>
@@ -93,7 +93,7 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="zip_code">Postal Code</label>
+                      <label for="zip_code">Kode Pos</label>
                       <input
                         type="text"
                         class="form-control"
@@ -105,7 +105,7 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="country">Country</label>
+                      <label for="country">Negara</label>
                       <input
                         type="text"
                         class="form-control"
@@ -117,7 +117,7 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="phone_number">Mobile</label>
+                      <label for="phone_number">Nomor HP</label>
                       <input
                         type="text"
                         class="form-control"
@@ -134,7 +134,7 @@
                       type="submit"
                       class="btn btn-success px-5"
                     >
-                      Save Now
+                      Simpan
                     </button>
                   </div>
                 </div>

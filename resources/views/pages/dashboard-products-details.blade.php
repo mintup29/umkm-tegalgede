@@ -12,9 +12,9 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-      <h2 class="dashboard-title">Shirup Marzan</h2>
+      <h2 class="dashboard-title">Edit Produk</h2>
       <p class="dashboard-subtitle">
-        Product Details
+        Detail Produk
       </p>
     </div>
     <div class="dashboard-content">
@@ -37,7 +37,7 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Product Name</label>
+                      <label>Nama Produk</label>
                       <input
                         type="text"
                         name="name"
@@ -48,7 +48,7 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Price</label>
+                      <label>Harga</label>
                       <input
                         type="number"
                         name="price"
@@ -70,7 +70,7 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Description</label>
+                      <label>Deskripsi</label>
                       <textarea name="description" id="editor">{!! $product->description !!}</textarea>
                     </div>
                   </div>
@@ -81,7 +81,7 @@
                       type="submit"
                       class="btn btn-success px-5 btn-block"
                     >
-                      Save Now
+                      Simpan Sekarang
                     </button>
                   </div>
                 </div>
@@ -99,6 +99,7 @@
                   <div class="col-md-4">
                     <div class="gallery-container">
                       <img
+                      
                         src="{{ Storage::url($gallery->photos ?? '') }}"
                         alt=""
                         class="w-100"
@@ -126,7 +127,7 @@
                       class="btn btn-secondary btn-block mt-3"
                       onclick="thisFileUpload()"
                     >
-                      Add Photo
+                      Tambah Foto
                     </button>
                   </form>
                 </div>

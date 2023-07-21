@@ -18,10 +18,10 @@
               <nav>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item">
-                    <a href="/index.html">Home</a>
+                    <a href="{{ route('home') }}">Home</a>
                   </li>
                   <li class="breadcrumb-item active">
-                    Product Details
+                    Detail Produk
                   </li>
                 </ol>
               </nav>
@@ -74,7 +74,7 @@
               <div class="col-lg-8">
                 <h1>{{ $product->name }}</h1>
                 <div class="owner">By {{ $product->user->store_name }}</div>
-                <div class="price">${{ number_format($product->price) }}</div>
+                <div class="price">Rp.{{ number_format($product->price) }}</div>
               </div>
               <div class="col-lg-2" data-aos="zoom-in">
                 @auth
@@ -84,7 +84,7 @@
                         type="submit"
                         class="btn btn-success px-4 text-white btn-block mb-3"
                       >
-                        Add to Cart
+                        Tambahkan ke Keranjang
                       </button>
                     </form>
                 @else
@@ -92,7 +92,7 @@
                       href="{{ route('login') }}"
                       class="btn btn-success px-4 text-white btn-block mb-3"
                     >
-                      Sign in to Add
+                      Login untuk Tambahkan ke Keranjang
                     </a>
                 @endauth
               </div>

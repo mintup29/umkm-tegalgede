@@ -37,10 +37,10 @@
               <table class="table table-borderless table-cart">
                 <thead>
                   <tr>
-                    <td>Image</td>
-                    <td>Name &amp; Seller</td>
-                    <td>Price</td>
-                    <td>Menu</td>
+                    <td>Foto</td>
+                    <td>Nama &amp; Penjual</td>
+                    <td>Harga</td>
+                    <td>Aksi</td>
                   </tr>
                 </thead>
                 <tbody>
@@ -61,8 +61,8 @@
                         <div class="product-subtitle">by {{ $cart->product->user->store_name }}</div>
                       </td>
                       <td style="width: 35%;">
-                        <div class="product-title">${{ number_format($cart->product->price) }}</div>
-                        <div class="product-subtitle">USD</div>
+                        <div class="product-title">Rp.{{ number_format($cart->product->price) }}</div>
+                        <div class="product-subtitle">Rupiah</div>
                       </td>
                       <td style="width: 20%;">
                         <form action="{{ route('cart-delete', $cart->products_id) }}" method="POST">
@@ -85,7 +85,7 @@
               <hr />
             </div>
             <div class="col-12">
-              <h2 class="mb-4">Shipping Details</h2>
+              <h2 class="mb-4">Detail Pengiriman</h2>
             </div>
           </div>
           <form action="{{ route('checkout') }}" method="POST" enctype="multipart/form-data">
@@ -100,7 +100,6 @@
                     class="form-control"
                     id="address_one"
                     name="address_one"
-                    value="Setra Duta Cemara"
                   />
                 </div>
               </div>
@@ -112,13 +111,12 @@
                     class="form-control"
                     id="address_two"
                     name="address_two"
-                    value="Blok B2 No. 34"
                   />
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                  <label for="provinces_id">Province</label>
+                  <label for="provinces_id">Provinsi</label>
                   <select name="provinces_id" id="provinces_id" class="form-control" v-model="provinces_id" v-if="provinces">
                     <option v-for="province in provinces" :value="province.id">@{{ province.name }}</option>
                   </select>
@@ -127,7 +125,7 @@
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                  <label for="regencies_id">City</label>
+                  <label for="regencies_id">Kota</label>
                   <select name="regencies_id" id="regencies_id" class="form-control" v-model="regencies_id" v-if="regencies">
                     <option v-for="regency in regencies" :value="regency.id">@{{regency.name }}</option>
                   </select>
@@ -136,19 +134,18 @@
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                  <label for="zip_code">Postal Code</label>
+                  <label for="zip_code">Kode Pos</label>
                   <input
                     type="text"
                     class="form-control"
                     id="zip_code"
                     name="zip_code"
-                    value="40512"
                   />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="country">Country</label>
+                  <label for="country">Negara</label>
                   <input
                     type="text"
                     class="form-control"
@@ -160,13 +157,12 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="phone_number">Mobile</label>
+                  <label for="phone_number">Nomor HP</label>
                   <input
                     type="text"
                     class="form-control"
                     id="phone_number"
                     name="phone_number"
-                    value="+628 2020 11111"
                   />
                 </div>
               </div>
@@ -176,24 +172,12 @@
                 <hr />
               </div>
               <div class="col-12">
-                <h2 class="mb-1">Payment Informations</h2>
+                <h2 class="mb-1">Informasi Pembayaran</h2>
               </div>
             </div>
             <div class="row" data-aos="fade-up" data-aos-delay="200">
               <div class="col-4 col-md-2">
-                <div class="product-title">$0</div>
-                <div class="product-subtitle">Country Tax</div>
-              </div>
-              <div class="col-4 col-md-3">
-                <div class="product-title">$0</div>
-                <div class="product-subtitle">Product Insurance</div>
-              </div>
-              <div class="col-4 col-md-2">
-                <div class="product-title">$0</div>
-                <div class="product-subtitle">Ship to Jakarta</div>
-              </div>
-              <div class="col-4 col-md-2">
-                <div class="product-title text-success">${{ number_format($totalPrice ?? 0) }}</div>
+                <div class="product-title text-success">Rp.{{ number_format($totalPrice ?? 0) }}</div>
                 <div class="product-subtitle">Total</div>
               </div>
               <div class="col-8 col-md-3">

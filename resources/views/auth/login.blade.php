@@ -14,13 +14,12 @@
                 </div>
                 <div class="col-lg-5">
                     <h2>
-                        Belanja kebutuhan utama, <br />
-                        menjadi lebih mudah
+                        Beli Produk UMKM asli dari Desa Tegalgede
                     </h2>
                     <form method="POST" action="{{ route('login') }}" class="mt-3">
                         @csrf
                         <div class="form-group">
-                            <label>Email Address</label>
+                            <label>Alamat Email</label>
                             <input id="email" type="email" class="form-control w-75 @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                             
                             @error('email')
@@ -43,13 +42,13 @@
                             type="submit"
                             class="btn btn-success btn-block w-75 mt-4"
                         >
-                            Sign In to My Account
+                            Masuk
                         </button>
                         <a
                             href="{{ route('register') }}"
                             class="btn btn-signup btn-block w-75 mt-2"
                         >
-                            Sign Up
+                            Daftar
                         </a>
                     </form>
                 </div>
