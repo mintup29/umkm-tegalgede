@@ -23,7 +23,9 @@
         <!-- Sidebar -->
         <div class="border-right" id="sidebar-wrapper">
           <div class="sidebar-heading text-center">
-            <img src="/images/dashboard-store-logo.svg" alt="" class="my-4" />
+            <a href="{{ route('home') }}">
+              <img src="/images/dashboard-store-logo.svg" alt="" class="my-4" />
+            </a>
           </div>
           <div class="list-group list-group-flush">
             <a
@@ -38,18 +40,18 @@
             >
               Daftar Produk
             </a>
-            <a
+            <!-- <a
               href="{{ route('dashboard-transaction') }}"
               class="list-group-item list-group-item-action {{ (request()->is('dashboard/transactions*')) ? 'active' : '' }} "
             >
               Transaksi
-            </a>
-            <a
+            </a> -->
+            <!-- <a
               href="{{ route('dashboard-settings-store') }}"
               class="list-group-item list-group-item-action {{ (request()->is('dashboard/settings*')) ? 'active' : '' }} "
             >
               Pengaturan Toko
-            </a>
+            </a> -->
             <a
               href="{{ route('dashboard-settings-account') }}"
               class="list-group-item list-group-item-action {{ (request()->is('dashboard/account*')) ? 'active' : '' }} "

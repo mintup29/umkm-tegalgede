@@ -19,8 +19,8 @@ data-aos="fade-up"
     </div>
     <div class="dashboard-content">
     <div class="row">
-        <div class="col-md-4">
-        <div class="card mb-2">
+        <div class="col-md-5">
+        <div class="card mb-3">
             <div class="card-body">
             <div class="dashboard-card-title">
                 Customer
@@ -31,26 +31,14 @@ data-aos="fade-up"
             </div>
         </div>
         </div>
-        <div class="col-md-4">
-        <div class="card mb-2">
+        <div class="col-md-5">
+        <div class="card mb-3">
             <div class="card-body">
             <div class="dashboard-card-title">
                 Jumlah Produk
             </div>
             <div class="dashboard-card-subtitle">
-                {{ number_format($revenue) }}
-            </div>
-            </div>
-        </div>
-        </div>
-        <div class="col-md-4">
-        <div class="card mb-2">
-            <div class="card-body">
-            <div class="dashboard-card-title">
-                Jumlah Toko
-            </div>
-            <div class="dashboard-card-subtitle">
-                {{ number_format($transaction_count) }}
+                {{ number_format($sum_product) }}
             </div>
             </div>
         </div>
@@ -58,39 +46,38 @@ data-aos="fade-up"
     </div>
     <div class="row mt-3">
         <div class="col-12 mt-2">
-            <h5 class="mb-3">Recent Transactions</h5>
-            @foreach ($transaction_data as $transaction)
-              <a
-                href="{{ route('dashboard-transaction-details', $transaction->id) }}"
-                class="card card-list d-block"
-                >
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-1">
+            <h5 class="mb-3">Produk Terbaru</h5>
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Foto
+                        </th>
+                        <th>
+                            Nama
+                        </th>
+                        <th>
+                            Tanggal Upload
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach ($products as $product)
+                    <tr>
+                        <td>
                             <img
-                                src="{{ Storage::url($transaction->product->galleries->first()->photos ?? '') }}"
-                                class="w-75"
+                                src="{{ Storage::url($product->galleries->first()->photos ?? '') }}"
+                                class="w-10"
                             />
-                        </div>
-                        <div class="col-md-4">
-                                {{ $transaction->product->name ?? '' }}
-                            </div>
-                            <div class="col-md-3">
-                                {{ $transaction->transaction->user->name ?? '' }}
-                            </div>
-                            <div class="col-md-3">
-                                {{  $transaction->created_at ?? '' }}
-                            </div>
-                            <div class="col-md-1 d-none d-md-block">
-                                <img
-                                    src="/images/dashboard-arrow-right.svg"
-                                    alt=""
-                                />
-                        </div>
-                    </div>
-                </div>
-            </a>  
-            @endforeach
+                        </td>
+                        <td>{{ $product->name}}</td>
+                        <td>{{ $product->created_at}}</td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+                
         </div>
     </div>
     </div>

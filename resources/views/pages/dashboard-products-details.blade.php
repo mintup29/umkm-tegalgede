@@ -99,9 +99,9 @@
                   <div class="col-md-4">
                     <div class="gallery-container">
                       <img
-                      
-                        src="{{ Storage::url($gallery->photos ?? '') }}"
-                        alt=""
+                        src="{{ asset('/storage/app/public/' . $gallery->photos) }}" alt="produk"
+                        
+                        alt="product"
                         class="w-100"
                       />
                       <a href="{{ route('dashboard-product-gallery-delete', $gallery->id) }}" class="delete-gallery">
