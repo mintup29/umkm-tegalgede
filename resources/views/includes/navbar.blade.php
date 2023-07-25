@@ -17,15 +17,10 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <input
-                class="search-box"
-                type="text"
-                name="Search"
-                placeholder="Cari Produk UMKM"
-              />
-              <a class="search-btn" href="#">
-                <i class="fas fa-search"></i>
-              </a>
+            <form action="{{ route('product-search') }}" method="GET">
+                <input type="text" name="query" class="search-box" placeholder="Search products...">
+                <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+            </form>
             </li>
             <li class="nav-item">
                 <a href="{{ route('home') }}" class="nav-link">Home</a>
