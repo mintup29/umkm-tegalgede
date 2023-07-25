@@ -43,6 +43,8 @@ Route::get('/success', [CartController::class, 'success'])->name('success');
 Route::post('/checkout/callback', [CheckoutController::class, 'callback'])->name('midtrans-callback');
 Route::get('/register/success', [RegisterController::class, 'success'])->name('register-success');
 
+Route::get('/contact-seller/{seller}/{productName}', 'ContactSellerController@sendWhatsAppMessage')->name('contact-seller');
+
 Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/cart', [CartController::class, 'index'])->name('cart');

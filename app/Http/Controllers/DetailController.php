@@ -18,6 +18,7 @@ class DetailController extends Controller
     public function index(Request $request, $id)
     {
         $product = Product::with(['galleries','user'])->where('slug', $id)->firstOrFail();
+        // dd($product);
 
         return view('pages.detail', [
             'product' => $product
