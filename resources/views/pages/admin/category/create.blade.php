@@ -1,7 +1,7 @@
-@extends('layouts.admin')
+@extends('layouts.dashboard')
 
 @section('title')
-  Store Settings
+    Store Dashboard Category
 @endsection
 
 @section('content')
@@ -12,9 +12,9 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-        <h2 class="dashboard-title">Category</h2>
+        <h2 class="dashboard-title">Kategori</h2>
         <p class="dashboard-subtitle">
-            Create New Category
+            Buat Kategori Produk Baru
         </p>
     </div>
     <div class="dashboard-content">
@@ -29,7 +29,7 @@
                   </ul>
               </div>
           @endif
-          <form action="{{ route('category.store') }}" method="post" enctype="multipart/form-data">
+          <form action="{{ route('dashboard-category-store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card">
               <div class="card-body">

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CategoryControllerCreate;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
@@ -70,6 +71,19 @@ Route::group(['middleware' => ['auth']], function () {
         ->name('dashboard-product-gallery-upload');
     Route::get('/dashboard/products/gallery/delete/{id}', [DashboardProductController::class, 'deleteGallery'])
         ->name('dashboard-product-gallery-delete');
+
+    Route::get('/dashboard/category', [CategoryController::class, 'indexCategory'])
+    ->name('dashboard-category');
+    Route::get('/dashboard/category/create', [CategoryController::class, 'create'])
+    ->name('dashboard-category-create');
+    Route::post('/dashboard/category', [CategoryController::class, 'store'])
+    ->name('dashboard-category-store');
+    Route::get('/dashboard/category/{id}', [CategoryController::class, 'detailsCategory'])
+        ->name('dashboard-category-details');
+    Route::post('/dashboard/category/{id}', [CategoryController::class, 'update'])
+    ->name('dashboard-category-update');
+    Route::get('/dashboard/category/gallery/delete/{id}', [CategoryController::class, 'deleteGallery'])
+        ->name('dashboard-category-gallery-delete');
 
     Route::get('/dashboard/transactions', [DashboardTransactionController::class, 'index'])
         ->name('dashboard-transaction');

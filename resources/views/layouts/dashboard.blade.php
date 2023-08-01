@@ -40,12 +40,12 @@
             >
               Daftar Produk
             </a>
-            <!-- <a
-              href="{{ route('dashboard-transaction') }}"
+            <a
+              href="{{ route('dashboard-category') }}"
               class="list-group-item list-group-item-action {{ (request()->is('dashboard/transactions*')) ? 'active' : '' }} "
             >
-              Transaksi
-            </a> -->
+              Daftar Kategori 
+            </a>
             <!-- <a
               href="{{ route('dashboard-settings-store') }}"
               class="list-group-item list-group-item-action {{ (request()->is('dashboard/settings*')) ? 'active' : '' }} "

@@ -96,7 +96,7 @@
                     </a>
                 @endauth
                 <a
-                  href="{{ route('contact-seller', ['seller' => $product->user->phone_number, 'productName' => $product->name]) }}"
+                  href="{{ route('contact-seller', ['seller' => $product->phone_number, 'productName' => $product->name]) }}"
                   class="btn btn-success px-4 text-white btn-block mb-3"
                 >
                   Hubungi Penjual

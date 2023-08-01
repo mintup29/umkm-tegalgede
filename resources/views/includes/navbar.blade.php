@@ -60,20 +60,38 @@
                         />
                         Hi, {{ Auth::user()->name }}
                     </a>
-                    <div class="dropdown-menu">
-                        <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
-                        <a href="{{ route('dashboard-settings-account') }}" class="dropdown-item">
-                            Settings
-                        </a>
-                        <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                               Logout
+                    @auth
+                        @if(auth()->user()->roles === 'admin')
+                            <div class="dropdown-menu">
+                            <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
+                            <a href="{{ route('dashboard-settings-account') }}" class="dropdown-item">
+                                Settings
                             </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
+                            <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                Logout
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        @else
+                            <div class="dropdown-menu">
+                            <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                Logout
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        @endif
+                    @else
+                        <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
+                    @endauth
+                    
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('cart') }}" class="nav-link d-inline-block mt-2">

@@ -12,7 +12,7 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-      <h2 class="dashboard-title">Create Product</h2>
+      <h2 class="dashboard-title">Tambah Produk</h2>
       <p class="dashboard-subtitle">
         Create your own product
       </p>
@@ -35,15 +35,27 @@
             <div class="card">
               <div class="card-body">
                 <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Nama Toko</label>
+                      <input type="text" class="form-control" name="store"/>
+                    </div>
+                  </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Product Name</label>
+                      <label>Nomor HP</label>
+                      <input type="text" class="form-control" name="phone_number"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Nama Produk</label>
                       <input type="text" class="form-control" name="name"/>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Price</label>
+                      <label>Harga</label>
                       <input type="number" class="form-control" name="price"/>
                     </div>
                   </div>
@@ -59,17 +71,17 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Description</label>
+                      <label>Deskripsi</label>
                       <textarea name="description" id="editor"></textarea>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Thumbnails</label>
+                      <label>Foto Thumbnails</label>
                       <input type="file" name="photo" class="form-control" />
-                      <p class="text-muted">
+                      <!-- <p class="text-muted">
                         Kamu dapat memilih lebih dari satu file
-                      </p>
+                      </p> -->
                     </div>
                   </div>
                 </div>

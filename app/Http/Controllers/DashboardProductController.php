@@ -15,6 +15,7 @@ class DashboardProductController extends Controller
     public function index()
     {
         $products = Product::with(['galleries','category'])->get();
+        // dd($products);
 
         return view('pages.dashboard-products',[
             'products' => $products
@@ -67,6 +68,7 @@ class DashboardProductController extends Controller
         $data = $request->all();
 
         $data['slug'] = Str::slug($request->name);
+        // dd($data);
         $product = Product::create($data);
 
         $gallery = [

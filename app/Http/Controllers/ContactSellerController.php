@@ -10,11 +10,7 @@ class ContactSellerController extends Controller
     public function sendWhatsAppMessage($seller, $productName)
     {
         // Retrieve the WhatsApp number and message data from the seller
-        // $seller = User::get();
-        // dd($seller);
-        $user = User::where('phone_number', $seller)->firstOrFail();
-        // $product = Product::with(['user'])->where('slug', $seller)->firstOrFail();
-        // dd($products);
+        $user = Product::where('phone_number', $seller)->firstOrFail();
         $number = $user->phone_number;
         $message = "Produk " . urlencode($productName) . " apakah masih ada?";
 
