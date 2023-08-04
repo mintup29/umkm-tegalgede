@@ -141,7 +141,7 @@
                         <div class="col-md-2">
                           <button
                             type="submit"
-                            class="btn btn-success btn-block mt-4"
+                            class="btn btn-primary btn-block mt-4"
                           >
                             Update Resi
                           </button>
@@ -154,7 +154,7 @@
                   <div class="col-12 text-right">
                     <button
                       type="submit"
-                      class="btn btn-success btn-lg mt-4"
+                      class="btn btn-primary btn-lg mt-4"
                     >
                       Save Now
                     </button>

@@ -15,7 +15,7 @@
 
     <style>
       .search-box{
-        border: 2px solid rgb(20, 194, 98);
+        border: 2px solid #004AAD;
         height: 40px;
         width: 450px;
         border-radius: 40px;
@@ -27,7 +27,7 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background: rgb(20, 194, 98);
+        background: #004AAD;
         display: flex;
         justify-content: center;
         align-items: center;

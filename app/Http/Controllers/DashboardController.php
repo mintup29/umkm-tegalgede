@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\TransactionDetail;
 use App\User;
 use App\Product;
+use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,6 +20,8 @@ class DashboardController extends Controller
 
         $sum_product = Product::count();
 
+        $sum_category = Category::count();
+
         $products = Product::with('galleries')->get();
         // dd($products);
 
@@ -30,6 +33,7 @@ class DashboardController extends Controller
             'products' => $products,
             'sum_product' => $sum_product,
             'customer' => $customer,
+            'sum_category' => $sum_category,
         ]);
     }
 }

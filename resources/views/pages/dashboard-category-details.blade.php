@@ -52,7 +52,7 @@
                   <div class="col-md-6 text-right">
                     <button
                       type="submit"
-                      class="btn btn-success px-5 btn-block"
+                      class="btn btn-primary px-5 btn-block"
                     >
                       Simpan Sekarang
                     </button>

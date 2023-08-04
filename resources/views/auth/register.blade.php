@@ -81,7 +81,7 @@
                         
                         <button
                             type="submit"
-                            class="btn btn-success btn-block mt-4"
+                            class="btn btn-primary btn-block mt-4"
                             :disabled="this.email_unavailable"
                         >
                             Daftar Sekarang

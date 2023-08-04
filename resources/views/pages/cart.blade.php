@@ -49,11 +49,14 @@
                     <tr>
                       <td style="width: 20%;">
                         @if($cart->product->galleries)
+                        <a href="{{ route('detail', $cart->product->slug) }}">
+
                           <img
                             src="{{ Storage::url($cart->product->galleries->first()->photos) }}"
                             alt=""
                             class="cart-image"
                           />
+                        </a>
                         @endif
                       </td>
                       <td style="width: 35%;">
@@ -61,7 +64,7 @@
                         <div class="product-subtitle">by {{ $cart->product->user->name }}</div>
                       </td>
                       <td style="width: 35%;">
-                        <div class="product-title">Rp.{{ number_format($cart->product->price) }}</div>
+                        <div class="product-title">Rp{{ number_format($cart->product->price) }}</div>
                         <div class="product-subtitle">Rupiah</div>
                       </td>
                       <td style="width: 20%;">
@@ -76,7 +79,7 @@
                       <td>
                         <a
                         href="{{ route('contact-seller', ['seller' => $cart->product->phone_number, 'productName' => $cart->product->name]) }}"
-                        class="btn btn-success px-4 text-white btn-block mb-3"
+                        class="btn btn-primary px-4 text-white btn-block mb-3"
                       >
                         Hubungi Penjual
                       </a>

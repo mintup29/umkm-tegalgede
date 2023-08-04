@@ -40,7 +40,7 @@
                         </div>
                         <button
                             type="submit"
-                            class="btn btn-success btn-block w-75 mt-4"
+                            class="btn btn-primary btn-block w-75 mt-4"
                         >
                             Masuk
                         </button>

@@ -12,7 +12,7 @@ class ContactSellerController extends Controller
         // Retrieve the WhatsApp number and message data from the seller
         $user = Product::where('phone_number', $seller)->firstOrFail();
         $number = $user->phone_number;
-        $message = "Produk " . urlencode($productName) . " apakah masih ada?";
+        $message = "Produk " . $productName . " apakah masih ada?";
 
         // Generate the WhatsApp URL with the number and message
         $whatsappUrl = "https://wa.me/{$number}?text=" . urlencode($message);

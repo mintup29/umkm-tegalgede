@@ -74,7 +74,7 @@
               <div class="col-lg-8">
                 <h1>{{ $product->name }}</h1>
                 <div class="owner">By {{ $product->user->store_name }}</div>
-                <div class="price">Rp.{{ number_format($product->price) }}</div>
+                <div class="price">Rp{{ number_format($product->price) }}</div>
               </div>
               <div class="col-lg-2" data-aos="zoom-in">
                 @auth
@@ -82,7 +82,7 @@
                       @csrf
                       <button
                         type="submit"
-                        class="btn btn-success px-4 text-white btn-block mb-3"
+                        class="btn btn-primary px-4 text-white btn-block mb-3"
                       >
                         Tambahkan ke Keranjang
                       </button>
@@ -90,14 +90,14 @@
                 @else
                     <a
                       href="{{ route('login') }}"
-                      class="btn btn-success px-4 text-white btn-block mb-3"
+                      class="btn btn-primary px-4 text-white btn-block mb-3"
                     >
                       Login untuk Tambahkan ke Keranjang
                     </a>
                 @endauth
                 <a
                   href="{{ route('contact-seller', ['seller' => $product->phone_number, 'productName' => $product->name]) }}"
-                  class="btn btn-success px-4 text-white btn-block mb-3"
+                  class="btn btn-primary px-4 text-white btn-block mb-3"
                 >
                   Hubungi Penjual
                 </a>

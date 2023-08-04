@@ -22,7 +22,7 @@
                   <div class="col-12">
                     <a
                       href="{{ route('dashboard-product-create') }}"
-                      class="btn btn-success"
+                      class="btn btn-primary"
                       >Add New Product</a
                     >
                   </div>

@@ -22,7 +22,7 @@
                   <div class="col-12">
                     <a
                       href="{{ route('dashboard-category-create') }}"
-                      class="btn btn-success"
+                      class="btn btn-primary"
                       >Tambah Kategori Baru</a
                     >
                   </div>
