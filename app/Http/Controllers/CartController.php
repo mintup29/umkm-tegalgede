@@ -16,6 +16,7 @@ class CartController extends Controller
     public function index()
     {
         $carts = Cart::with(['product.galleries', 'user'])->where('users_id', Auth::user()->id)->get();
+        // dd($carts);
         
         return view('pages.cart',[
             'carts' => $carts
@@ -25,6 +26,7 @@ class CartController extends Controller
     public function delete(Request $request, $id)
     {
         $cart = Cart::findOrFail($id);
+        // dd($cart);
 
         $cart->delete();
 
