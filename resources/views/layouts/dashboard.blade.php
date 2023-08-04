@@ -42,7 +42,7 @@
             </a>
             <a
               href="{{ route('dashboard-category') }}"
-              class="list-group-item list-group-item-action {{ (request()->is('dashboard/transactions*')) ? 'active' : '' }} "
+              class="list-group-item list-group-item-action {{ (request()->is('dashboard/category*')) ? 'active' : '' }} "
             >
               Daftar Kategori 
             </a>

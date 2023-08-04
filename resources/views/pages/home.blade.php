@@ -87,7 +87,7 @@
                             data-aos="fade-up"
                             data-aos-delay="100"
                         >
-                            No Categories Found
+                            Belum ada kategori
                         </div>
                     @endforelse
                 </div>
@@ -128,7 +128,7 @@
                         </div>
                     @empty
                         <div class="col-12 text-center py-5" data-aos="fade-up" data-aos-delay="100">
-                            No Products Found
+                            Belum ada produk
                         </div>
                     @endforelse
                 </div>

@@ -35,6 +35,28 @@
             <div class="card">
               <div class="card-body">
                 <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Nama Toko</label>
+                      <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        value="{{ $product->store }}"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Nomor HP</label>
+                      <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        value="{{ $product->phone_number }}"
+                      />
+                    </div>
+                  </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Nama Produk</label>
@@ -99,7 +121,7 @@
                   <div class="col-md-4">
                     <div class="gallery-container">
                       <img
-                        src="{{ asset('/storage/app/public/' . $gallery->photos) }}" alt="produk"
+                        src="{{ asset('/storage/' . $gallery->photos) }}" alt="produk"
                         
                         alt="product"
                         class="w-100"
@@ -131,6 +153,24 @@
                     </button>
                   </form>
                 </div>
+                <div class="card">
+                <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12 text-right">
+                      <a href="{{ route('dashboard-product-details-delete', $product->id) }}" class="delete-product" data-id="{{ $product->id }}">
+                      <button
+                          type="submit"
+                          class="btn btn-danger px-5 btn-block"
+                          
+                        >
+                          Hapus
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -151,4 +191,34 @@
   <script>
     CKEDITOR.replace("editor");
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+<script>
+    // Get all elements with class 'delete-gallery'
+    const deleteButtons = document.querySelectorAll('.delete-product');
+
+    // Add a click event listener to each delete button
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const productId = this.getAttribute('data-id');
+
+            // Show the SweetAlert confirmation modal
+            Swal.fire({
+                title: 'Apakah Anda Yakin?',
+                text: 'Anda akan mengahapus produk ini!',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ya, hapus ini!',
+                cancelButtonText: 'Batal',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // If user confirms, redirect to deleteGallery route
+                    window.location.href = `/dashboard/products/delete/${productId}`;
+                }
+            });
+        });
+    });
+</script>
 @endpush

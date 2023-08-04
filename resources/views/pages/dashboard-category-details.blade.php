@@ -67,11 +67,11 @@
           <div class="card-body">
           <div class="row">
             <div class="col-md-6 text-right">
-                <a href="{{ route('dashboard-category-gallery-delete', $categories->id) }}" class="delete-gallery">
+                <a href="{{ route('dashboard-category-gallery-delete', $categories->id) }}" class="delete-gallery" data-id="{{ $categories->id }}">
                 <button
                     type="submit"
                     class="btn btn-danger px-5 btn-block"
-                    data-id="{{ $categories->id }}"
+                    
                   >
                     Hapus
                   </button>
@@ -138,7 +138,7 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     // If user confirms, redirect to deleteGallery route
-                    window.location.href = `/dashboard-category-gallery-delete/${categoryId}`;
+                    window.location.href = `/dashboard/category/gallery/delete/${categoryId}`;
                 }
             });
         });

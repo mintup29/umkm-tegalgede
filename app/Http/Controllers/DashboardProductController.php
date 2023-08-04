@@ -25,12 +25,21 @@ class DashboardProductController extends Controller
     public function details(Request $request, $id)
     {
         $product = Product::with(['galleries','user','category'])->findOrFail($id);
+        // dd($product);
         $categories = Category::all();
 
         return view('pages.dashboard-products-details',[
             'product' => $product,
             'categories' => $categories
         ]);
+    }
+
+    public function delete(Request $request, $id)
+    {
+        $item = Product::findorFail($id);
+        $item->delete();
+
+        return redirect()->route('dashboard-product', $item->products_id);
     }
 
     public function uploadGallery(Request $request)
