@@ -4,7 +4,7 @@
     >
       <div class="container">
         <a href="/index.html" class="navbar-brand">
-          <img src="/images/logo.svg" alt="Logo" />
+          <img src="/images/logo.png" alt="Logo" class="logo"/>
         </a>
         <button
           class="navbar-toggler"
