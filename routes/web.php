@@ -103,6 +103,11 @@ Route::group(['middleware' => ['auth']], function () {
 
 });
 
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])
+        ->name('dashboard');
+});
+
 Route::prefix('admin')
     ->namespace('Admin')
     ->middleware(['auth','admin'])
