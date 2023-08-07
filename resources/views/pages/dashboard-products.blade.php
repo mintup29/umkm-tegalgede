@@ -14,7 +14,7 @@
               <div class="dashboard-heading">
                 <h2 class="dashboard-title">Daftar Produk</h2>
                 <p class="dashboard-subtitle">
-                  Manage it well and get money
+                  Daftar Produk dan Atur Produk
                 </p>
               </div>
               <div class="dashboard-content">

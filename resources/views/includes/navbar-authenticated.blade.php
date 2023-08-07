@@ -35,7 +35,7 @@
                 data-toggle="dropdown"
               >
                 <img
-                  src="/images/icon-user.png"
+                  src="/images/icon-user.jpg"
                   alt=""
                   class="rounded-circle mr-2 profile-picture"
                 />

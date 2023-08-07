@@ -14,7 +14,7 @@
               <div class="dashboard-heading">
                 <h2 class="dashboard-title">Daftar Kategori</h2>
                 <p class="dashboard-subtitle">
-                  
+                  Daftar Kategori dan Atur Kategori
                 </p>
               </div>
               <div class="dashboard-content">

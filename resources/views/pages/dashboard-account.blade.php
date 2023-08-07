@@ -14,7 +14,7 @@
     <div class="dashboard-heading">
       <h2 class="dashboard-title">Akunku</h2>
       <p class="dashboard-subtitle">
-        Update your current profile
+        Update Akun Admin
       </p>
     </div>
     <div class="dashboard-content">

@@ -86,7 +86,7 @@
                 <div class="col-12 text-center py-5" 
                     data-aos="fade-up"
                     data-aos-delay="100">
-                        No Products Found
+                        Tidak Ada Produk
                 </div>
             @endforelse
           </div>

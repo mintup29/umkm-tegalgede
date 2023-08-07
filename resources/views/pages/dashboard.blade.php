@@ -14,7 +14,7 @@ data-aos="fade-up"
     <div class="dashboard-heading">
     <h2 class="dashboard-title">Dashboard</h2>
     <p class="dashboard-subtitle">
-        Look what you have made today!
+        Dashboard Admin
     </p>
     </div>
     <div class="dashboard-content">
